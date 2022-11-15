@@ -1,0 +1,287 @@
+:root {
+  --primary-light: #8abdff;
+  --primary: #6d5dfc;
+  --primary-dark: #5b0eeb;
+  --white: #ffffff;
+  --greyLight-1: #e4ebf5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+}
+
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-y: scroll;
+  background: var(--greyLight-1);
+}
+
+@media screen and (min-width: 900px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background: var(--greyLight-1);
+}
+
+.components {
+  width: 75rem;
+  height: 40rem;
+  border-radius: 3rem;
+  box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 17.6rem 19rem 20.4rem;
+  grid-template-rows: repeat(autofit, min-content);
+  grid-column-gap: 5rem;
+  grid-row-gap: 2.5rem;
+  align-items: center;
+}
+
+/* Switch */
+.switch {
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  grid-gap: 3rem;
+  justify-self: center;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch__1,
+.switch__2 {
+  width: 6rem;
+}
+
+.switch__1 label,
+.switch__2 label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  background: rgba(255, 255, 255, 0);
+  position: relative;
+  cursor: pointer;
+  border-radius: 1.6rem;
+}
+
+.switch__1 label::after,
+.switch__2 label::after {
+  content: "";
+  position: absolute;
+  left: 0.4rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: var(--greyDark);
+  transition: all 0.4s ease;
+}
+
+.switch__1 label::before,
+.switch__2 label::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(330deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.switch input:checked~label::before {
+  opacity: 1;
+}
+
+.switch input:checked~label::after {
+  left: 57%;
+  background: var(--greyLight-1);
+}
+
+/* Checkbox */
+
+.checkbox {
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: repeat(2, 6rem);
+  grid-gap: 3rem;
+  justify-content: center;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox__1,
+.checkbox__2 {
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox__1 label,
+.checkbox__2 label {
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.checkbox__1 label:hover i,
+.checkbox__2 label:hover i {
+  color: var(--primary);
+}
+
+.checkbox__1 label i,
+.checkbox__2 label i {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--greyDark);
+  transition: 0.3s ease;
+}
+
+.checkbox__1 input:checked~label,
+.checkbox__2 input:checked~label {
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+.checkbox__1 input:checked~label i,
+.checkbox__2 input:checked~label i {
+  color: var(--primary);
+}
+
+
+/* Radio */
+
+.radio {
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.radio input {
+  display: none;
+}
+
+.radio__1 input:checked~label,
+.radio__2 input:checked~label {
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+.radio__1 input:checked~label::after,
+.radio__2 input:checked~label::after {
+  background: var(--primary);
+}
+
+.radio__1 label,
+.radio__2 label {
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+}
+
+.radio__1 label:hover::after,
+.radio__2 label:hover::after {
+  background: var(--primary);
+}
+
+.radio__1 label::after,
+.radio__2 label::after {
+  content: "";
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: var(--greyDark);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+
+/* buttons */
+
+.btn {
+  width: 15rem;
+  height: 4rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn__primary {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  background: var(--primary);
+  box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-light), inset -0.2rem -0.2rem 1rem var(--primary-dark), 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  color: var(--greyLight-1);
+}
+
+.btn__primary:hover {
+  color: var(--white);
+}
+
+.btn__primary:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-dark), inset -0.2rem -0.2rem 1rem var(--primary-light);
+}
+
+.btn__secondary {
+  grid-column: 1/2;
+  grid-row: 5/6;
+  columns: var(--greyDark);
+}
+
+.btn__secondary:hover {
+  color: var(--primary);
+}
+
+.btn__secondary:active {
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+.btn p {
+  font-size: 1.6rem;
+}
+
+
+/* End of part 1  Thanks for watching*/
+
+
+
+.logo {
+  position: fixed;
+  right: 2rem;
+  bottom: 1rem;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
