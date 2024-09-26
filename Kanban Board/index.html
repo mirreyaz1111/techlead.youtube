@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h4 id="todo-header">TODO</h4>
+        <h4 id="in-progress-header">IN-PROGRESS</h4>
+        <h4 id="in-qa-header">IN-QA</h4>
+        <h4 id="done-header">DONE</h4>
+      </div>
+      <div class="drag-drop-container">
+        <div
+          class="col3"
+          id="todo"
+          ondrop="drop(event)"
+          ondragover="allowdrop(event)"
+        >
+          <p class="task" id="task1" draggable="true" ondragstart="drag(event)">
+            Task 1
+          </p>
+          <p class="task" id="task2" draggable="true" ondragstart="drag(event)">
+            Task 2
+          </p>
+          <p class="task" id="task3" draggable="true" ondragstart="drag(event)">
+            Task 3
+          </p>
+          <p class="task" id="task4" draggable="true" ondragstart="drag(event)">
+            Task 4
+          </p>
+          <p class="task" id="task5" draggable="true" ondragstart="drag(event)">
+            Task 5
+          </p>
+        </div>
+        <div
+          class="col3"
+          id="in-progress"
+          ondrop="drop(event)"
+          ondragover="allowdrop(event)"
+        ></div>
+        <div
+          class="col3"
+          id="in-qa"
+          ondrop="drop(event)"
+          ondragover="allowdrop(event)"
+        ></div>
+        <div
+          class="col3"
+          id="done"
+          ondrop="drop(event)"
+          ondragover="allowdrop(event)"
+        ></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
