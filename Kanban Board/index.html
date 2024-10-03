@@ -1,104 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="logo-menu-container">
-        <div class="logo-container">
-          <img src="./images/planning.png" alt="" class="logo">
-          <p>Kanban Board</p>
-        </div>
-        <img class="menu-icon" src="./images/menus.png" alt="">
-      </div>
-      <div class="side-menu">
-        <div class="menu-item">
-          <img src="./images/home.png" alt="" class="icon">
-          <p class="title">Home</p>
-        </div>
-        <div class="menu-item">
-          <img src="./images/check-mark.png" alt="" class="icon">
-          <p class="title">My Tasks</p>
-        </div>
-        <div class="menu-item">
-          <img src="./images/bell.png" alt="" class="icon">
-          <p class="title">Inbox</p>
-        </div>
-        <p class="menu-title">Reporting</p>
-        
-        <div class="menu-item">
-          <img src="./images/bell.png" alt="" class="icon">
-          <p class="title">Inbox</p>
-        </div>
-        <div class="menu-item">
-          <img src="./images/bell.png" alt="" class="icon">
-          <p class="title">Inbox</p>
-        </div>
-        
-        <p class="menu-title">Favourites</p>
-        <div class="favourite-item">
-          <div class="color"></div>
-          <p class="title">Recruiting weekly mee...</p>
-        </div>
-        <div class="favourite-item">
-          <div class="color"></div>
-          <p class="title">Recruiting weekly mee...</p>
-        </div>
-        <div class="favourite-item">
-          <div class="color"></div>
-          <p class="title">Recruiting weekly mee...</p>
-        </div>
-        <div class="favourite-item">
-          <div class="color"></div>
-          <p class="title">Recruiting weekly mee...</p>
-        </div>
-      </div>
-    </div>
-    <div class="right-side">
-      <div class="main-header">
-        main header
-      </div>
-
-      <div class="content">
-        <div class="header">
-          <h4 id="todo-header">TODO</h4>
-          <h4 id="in-progress-header">IN-PROGRESS</h4>
-          <h4 id="in-qa-header">IN-QA</h4>
-          <h4 id="done-header">DONE</h4>
-        </div>
-        <div class="drag-drop-container">
-          <div class="col3" id="todo" ondrop="drop(event)" ondragover="allowdrop(event)">
-            <p class="task" id="task1" draggable="true" ondragstart="drag(event)">
-              Task 1
-            </p>
-            <p class="task" id="task2" draggable="true" ondragstart="drag(event)">
-              Task 2
-            </p>
-            <p class="task" id="task3" draggable="true" ondragstart="drag(event)">
-              Task 3
-            </p>
-            <p class="task" id="task4" draggable="true" ondragstart="drag(event)">
-              Task 4
-            </p>
-            <p class="task" id="task5" draggable="true" ondragstart="drag(event)">
-              Task 5
-            </p>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo-menu-container">
+          <div class="logo-container">
+            <img src="./images/planning.png" alt="" class="logo" />
+            <p>Kanban Board</p>
           </div>
-          <div class="col3" id="in-progress" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
-          <div class="col3" id="in-qa" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
-          <div class="col3" id="done" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
+          <img class="menu-icon" src="./images/menus.png" alt="" />
+        </div>
+        <div class="side-menu">
+          <div class="menu-item">
+            <img src="./images/home.png" alt="" class="icon" />
+            <p class="title">Home</p>
+          </div>
+          <div class="menu-item">
+            <img src="./images/check-mark.png" alt="" class="icon" />
+            <p class="title">My Tasks</p>
+          </div>
+          <div class="menu-item">
+            <img src="./images/bell.png" alt="" class="icon" />
+            <p class="title">Inbox</p>
+          </div>
+          <p class="menu-title">Reporting</p>
+
+          <div class="menu-item">
+            <img src="./images/bell.png" alt="" class="icon" />
+            <p class="title">Inbox</p>
+          </div>
+          <div class="menu-item">
+            <img src="./images/bell.png" alt="" class="icon" />
+            <p class="title">Inbox</p>
+          </div>
+
+          <p class="menu-title">Favourites</p>
+          <div class="favourite-item">
+            <div class="color"></div>
+            <p class="title">Recruiting weekly mee...</p>
+          </div>
+          <div class="favourite-item">
+            <div class="color"></div>
+            <p class="title">Recruiting weekly mee...</p>
+          </div>
+          <div class="favourite-item">
+            <div class="color"></div>
+            <p class="title">Recruiting weekly mee...</p>
+          </div>
+          <div class="favourite-item">
+            <div class="color"></div>
+            <p class="title">Recruiting weekly mee...</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="main-header">
+          <div class="project-container">
+            <img src="./images/menu-bar.png" alt="" class="project-icon" />
+            <div class="project-name-container">
+              <p class="project-name">My Project - 1</p>
+              <div class="status">
+                <div class="color-box"></div>
+                On Track
+              </div>
+            </div>
+          </div>
+          <div class="header-controls">
+            <div class="avatar-group">
+              <img src="./images/avatar.png" alt="" class="avatar" />
+              <img src="./images/avatar.png" alt="" class="avatar" />
+              <img src="./images/avatar.png" alt="" class="avatar" />
+              <img src="./images/avatar.png" alt="" class="avatar" />
+            </div>
+            <button class="share-btn">
+              <img src="./images/share-arrow.png" alt="" /> Share
+            </button>
+            <div class="search">
+              <img src="./images/search-icon.png" alt="" />
+              <input type="text" placeholder="Search" />
+            </div>
+            <button class="add-btn">+</button>
+            <img src="./images/avatar.png" alt="" class="user-avatar" />
+          </div>
+        </div>
+        <div class="tab-bar">
+          <div class="tab">Overview</div>
+          <div class="tab">List</div>
+          <div class="tab active">Board</div>
+          <div class="tab">Timeline</div>
+          <div class="tab">Calendar</div>
+          <div class="tab">Dashboard</div>
+          <div class="tab">More...</div>
+        </div>
+
+        <div class="content">
+          <div class="header">
+            <h4 id="todo-header">TODO</h4>
+            <h4 id="in-progress-header">IN-PROGRESS</h4>
+            <h4 id="in-qa-header">IN-QA</h4>
+            <h4 id="done-header">DONE</h4>
+          </div>
+          <div class="drag-drop-container">
+            <div
+              class="col3"
+              id="todo"
+              ondrop="drop(event)"
+              ondragover="allowdrop(event)"
+            >
+              <p
+                class="task"
+                id="task1"
+                draggable="true"
+                ondragstart="drag(event)"
+              >
+                Task 1
+              </p>
+              <p
+                class="task"
+                id="task2"
+                draggable="true"
+                ondragstart="drag(event)"
+              >
+                Task 2
+              </p>
+              <p
+                class="task"
+                id="task3"
+                draggable="true"
+                ondragstart="drag(event)"
+              >
+                Task 3
+              </p>
+              <p
+                class="task"
+                id="task4"
+                draggable="true"
+                ondragstart="drag(event)"
+              >
+                Task 4
+              </p>
+              <p
+                class="task"
+                id="task5"
+                draggable="true"
+                ondragstart="drag(event)"
+              >
+                Task 5
+              </p>
+            </div>
+            <div
+              class="col3"
+              id="in-progress"
+              ondrop="drop(event)"
+              ondragover="allowdrop(event)"
+            ></div>
+            <div
+              class="col3"
+              id="in-qa"
+              ondrop="drop(event)"
+              ondragover="allowdrop(event)"
+            ></div>
+            <div
+              class="col3"
+              id="done"
+              ondrop="drop(event)"
+              ondragover="allowdrop(event)"
+            ></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

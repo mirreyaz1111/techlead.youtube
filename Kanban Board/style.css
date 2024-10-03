@@ -14,7 +14,7 @@
   border-right: 1px solid rgb(230, 230, 230);
 }
 
-.sidebar .logo-menu-container{
+.sidebar .logo-menu-container {
   display: flex;
   align-items: center;
 }
@@ -41,17 +41,11 @@
   height: 20px;
 }
 
-.right-side {
-  width: 100%;
-  padding: 20px;
-}
-
-
 .sidebar .side-menu .menu-item {
   display: flex;
   align-items: center;
 }
-.sidebar .side-menu .menu-item .icon{
+.sidebar .side-menu .menu-item .icon {
   width: 20px;
   margin-right: 12px;
 }
@@ -69,6 +63,160 @@
   margin-right: 12px;
 }
 
+/* Right side */
+.right-side {
+  width: 100%;
+  padding: 20px;
+}
+
+.main-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+
+.main-header .project-container {
+  display: flex;
+  align-items: center;
+}
+
+.project-container .project-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.project-container .project-name-container {
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-name-container .project-name {
+  font-size: 12px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.project-name-container .status {
+  margin: 0;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.project-name-container .status .color-box {
+  width: 6px;
+  height: 6px;
+  background-color: green;
+  margin-right: 4px;
+  border-radius: 2px;
+}
+
+.main-header .header-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-header .header-controls .avatar-group {
+  margin-right: 20px;
+}
+
+.main-header .header-controls .avatar-group .avatar {
+  height: 28px;
+  width: 28px;
+  background-color: hsl(23, 100%, 59%);
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  margin-right: -8px;
+}
+.main-header .header-controls .avatar-group .avatar:hover {
+  z-index: 2;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.552);
+}
+.header-controls .share-btn {
+  height: 28px;
+  padding: 0 10px;
+  margin-right: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.348);
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.header-controls .share-btn img {
+  width: 12px;
+  opacity: 70%;
+  margin-right: 4px;
+}
+
+.header-controls .search {
+  height: 28px;
+  padding: 0 10px;
+  margin-right: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.348);
+  display: flex;
+  align-items: center;
+}
+.main-header .header-controls .search img {
+  width: 12px;
+  opacity: 70%;
+  margin-right: 4px;
+}
+.main-header .header-controls .search input {
+  border: none;
+  outline: none;
+}
+.main-header .header-controls .add-btn {
+  height: 28px;
+  width: 28px;
+  padding: auto;
+  margin-right: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: hsl(23, 100%, 59%);
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+.main-header .header-controls .user-avatar {
+  height: 28px;
+  width: 28px;
+  background-color: hsl(23, 100%, 59%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Header Tabbar */
+.tab-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.118);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.tab-bar .tab {
+  padding: 16px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.tab-bar .tab.active {
+  color: rgb(68, 23, 173);
+  font-weight: 500;
+  border-bottom: 1px solid rgb(68, 23, 173);
+}
 
 /* header */
 .header {
